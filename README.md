@@ -1,0 +1,1 @@
+Meu primeiro jogo por texto em Python, o código é bem disguisting mas fazer o que né. ㄟ( ▔, ▔ )ㄏ
