@@ -1,6 +1,11 @@
 import pygame
+import os
 while True:
     pygame.mixer.init()
+    base_path = os.path.dirname(__file__)
+    file_path = os.path.join(base_path, 'music', 'spookyfunnight.mp3')
+    pygame.mixer.music.load(file_path)
+    pygame.mixer.music.play(loops=-1)
     bemvindo = input(('Bem vindo! você gostaria de jogar um jogo? :) '))
     if bemvindo in ["Sim", "sim", "sim!", "Sim!"]:
         print('Vamos nessa!!!',end=' ')
