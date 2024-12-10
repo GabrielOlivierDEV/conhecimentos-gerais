@@ -1,3 +1,5 @@
+# Don't worry stranger looking my code, I know it's pretty disgusting, but I'm still learning python, and when I get better, I'll return
+# And I'll make this code less bad
 import pygame
 import os
 while True:
