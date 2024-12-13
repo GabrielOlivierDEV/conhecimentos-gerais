@@ -25,3 +25,18 @@ Primeiro, clone o repositório para o seu computador:
 ```bash
 git clone https://github.com/Bieelzy/conhecimentos-gerais.git
 cd conhecimentos-geraos
+```
+### Passo 2: Estrutura de Pastas
+  ```bash
+  .
+  script/ # pasta mãe
+  ├── conhecimentos gerais.py # O código principal do jogo
+  ├── music/ # Pasta com arquivos de música
+      ├── spookyfunnight.mp3
+      └── errou.mp3
+  ```
+### Execute o Script
+  - Para rodar o jogo, execute o seguinte comando no terminal:
+  ```bash
+  python "conhecimentos gerais.py"
+  ```
