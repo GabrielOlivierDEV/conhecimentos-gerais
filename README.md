@@ -36,7 +36,7 @@ cd conhecimentos-geraos
       └── errou.mp3
   ```
 ### Execute o Script
-  - Para rodar o jogo, execute o seguinte comando no terminal:
+Para rodar o jogo, execute o seguinte comando no terminal:
   ```bash
   python "conhecimentos gerais.py"
   ```
