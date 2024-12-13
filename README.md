@@ -24,7 +24,7 @@ Certifique-se de ter os seguintes itens instalados em sua máquina:
 Primeiro, clone o repositório para o seu computador:
 ```bash
 git clone https://github.com/Bieelzy/conhecimentos-gerais.git
-cd conhecimentos-geraos
+cd conhecimentos-gerais
 ```
 ### Passo 2: Estrutura de Pastas
   ```bash
