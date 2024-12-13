@@ -1,8 +1,7 @@
 # Change Log
 Meio que só fiz uma changelog no update final heh.
  
- 
-## [1.0.0] - 2024-11-28  
+## [v1.0.0] - 2024-11-28  
  
 ### Added
 - O jogo inteiro
@@ -11,7 +10,7 @@ Meio que só fiz uma changelog no update final heh.
  
 ### Fixed
  
-## [1.1.0] - 2024-12-05
+## [v1.1.0] - 2024-12-05
  
 ### Added
 - Musiquinha de fundo
@@ -20,7 +19,7 @@ Meio que só fiz uma changelog no update final heh.
  
 ### Fixed
 
-## [2.0] - 2024-12-13
+## [v2.0.0] - 2024-12-13
  
 ### Added
 - MAIS 5 PERGUNTAS NOVAS!
