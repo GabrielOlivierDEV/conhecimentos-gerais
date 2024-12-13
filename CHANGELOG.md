@@ -24,7 +24,7 @@ Meio que só fiz uma changelog no update final heh.
  
 ### Added
 - MAIS 5 PERGUNTAS NOVAS!
-- Maior suporte! Agora é póssivel adicionar mais perguntas facilmente!
+- Maior suporte! Agora é possível adicionar mais perguntas facilmente!
 - Quando você errar, tocará o áudio "ERROU" do Faustão!
 
 ### Changed
