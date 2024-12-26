@@ -1,5 +1,6 @@
 import pygame
 import os
+from time import sleep
 pygame.mixer.init()
 base_path = os.path.dirname(__file__)
 
@@ -21,41 +22,96 @@ perguntas = [
 
 ]
 
-def fazer_perguntas(perguntas):
-    
-     for pergunta in perguntas:
-          print(pergunta["texto"])
-          resposta = input().strip().lower()
-          if resposta == pergunta["resposta"]:
-               print(acertou)
-          else:
-               print(errou)
-               error() 
-               return False
-     return True
+def fazer_perguntas(perguntas): # Função para o modo difícil
+    print('MODO DIFÍCIL ATIVADO!!!')
+    sleep(2)
+    pontuacao = 0  # Inicializa a pontuação
 
-def ost():
+    for pergunta in perguntas: # Loop para as perguntas
+        print(pergunta["texto"]) # Exibe a pergunta
+        resposta = input().strip().lower() # Recebe a resposta do jogador
+        if resposta == pergunta["resposta"]: # Verifica se a resposta está correta
+            print(acertou)
+            pontuacao += 1  # Incrementa a pontuação            
+            sleep(2)
+        else: # Se a resposta estiver errada
+            print(errou)
+            sleep(2)
+            return False
+
+    print(f'Sua pontuação final é: {pontuacao} de {len(perguntas)}') # Exibe a pontuação final
+    return True
+    
+
+def fazer_perguntas_normal(perguntas): # Função para o modo normal
+    print('MODO NORMAL ATIVADO!!! Você tem direito a pular uma pergunta. Para pular, digite "p"')
+    sleep(2)
+    pontuacao = 0  # Inicializa a pontuação
+
+    for pergunta in perguntas: # Loop para as perguntas
+        print(pergunta["texto"]) # Exibe a pergunta
+        resposta = input().strip().lower() # Recebe a resposta do jogador
+        if resposta == pergunta["resposta"]: # Verifica se a resposta está correta
+            print(acertou)
+            pontuacao += 1  # Incrementa a pontuação
+            sleep(2)
+        elif resposta == 'p': # Verifica se o jogador deseja pular a pergunta
+            print('Pulou a pergunta')
+            continue
+        else: # Se a resposta estiver errada
+            print(errou)
+            sleep(2)
+
+    print(f'Sua pontuação final é: {pontuacao} de {len(perguntas)}') # Exibe a pontuação final
+    return True
+
+def ost(): # Função para a música de fundo
     spooky = os.path.join(base_path, 'music', 'spookyfunnight.mp3')
     pygame.mixer.music.load(spooky)
     pygame.mixer.music.play(loops=-1)
 
-def error():
+def error(): # Função para o som de erro
      faustão = os.path.join(base_path, 'music', 'errou.mp3')
      error_sound = pygame.mixer.Sound(faustão)
      error_sound.play()
 
-ost()
+ost() # Inicia a música de fundo
 
-bemvindo = input(('Bem vindo! você gostaria de jogar um jogo? (s/n) :) ')).strip().lower()
+bemvindo = input(('Bem vindo! você gostaria de jogar um jogo? (s/n) :) ')).strip().lower() # Pergunta se o jogador deseja jogar
 if bemvindo == 's':
-        print('Vamos nessa!!!',end=' ')
+        print('Vamos nessa!!!')
+        sleep(2)
 else:
-        print('Você não tem escolha :3',end=' ')
+        print('Você não tem escolha :3')
+        sleep(2)
 
-while True:        
-    venceu = fazer_perguntas(perguntas)
-    if venceu:
-        print(fim)
-        end = input()
-        if end == 'n':
-              break
+ajuda = input('Você gostaria de saber sobre o jogo? (s/n) ').strip().lower() # Pergunta se o jogador deseja saber sobre o jogo
+if ajuda == 's':
+     print('O jogo é simples, você terá que responder perguntas de conhecimentos gerais.')
+     sleep(2)
+     print('Você terá duas opções de dificuldade: normal e difícil.')
+     sleep(2)
+     print('Na dificuldade normal, se você errar perderá pontos, e você terá direito a pular uma pergunta.')
+     sleep(2)
+     print('Na dificuldade difícil, você não terá direito a pular nenhuma pergunta. E se você perder, reiniciará o jogo.')
+     sleep(2)
+     print('Boa sorte!!!')
+else:
+     print('Então vamos lá!!!')
+     sleep(2)
+
+while True: # Loop para o jogo
+     dificuldade = input('Escolha a dificuldade: normal, difícil (n/d) ').strip().lower() # Pergunta a dificuldade
+     if dificuldade == 'n':
+          venceu = fazer_perguntas_normal(perguntas)
+     elif dificuldade == 'd':
+          venceu = fazer_perguntas(perguntas)
+     else:
+          print("Dificuldade inválida. Escolha 'normal' ou 'difícil'.") # Mensagem de erro
+          break
+
+     if venceu: # Verifica se o jogador venceu
+          print(fim) # Exibe a mensagem de vitória
+          end = input() # Pergunta se o jogador deseja jogar novamente
+          if end == 'n': # Verifica se o jogador deseja jogar novamente
+               break # Encerra o jogo
