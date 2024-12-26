@@ -1,2 +1,42 @@
 Meu primeiro jogo por texto em Python, o código é bem disguisting, mas fazer o que né. ㄟ( ▔, ▔ )ㄏ
-![image](https://github.com/user-attachments/assets/c5724a4b-fc8c-4381-b177-524da5360802)
+
+### Sobre
+- Este é um jogo por texto de perguntas e respostas criado por mim para aprender programar jogos em Python
+- Totalmente customizável! Você pode colocar mais perguntas no script.
+  
+### Screenshot
+![image](https://github.com/user-attachments/assets/97183bab-8500-4077-bce6-444ba429e8d8)
+
+## **Pré-requisitos**
+Certifique-se de ter os seguintes itens instalados em sua máquina:
+1. **Python 3.8** ou superior
+2. **Biblioteca Pygame**
+   - Instale o Pygame com o seguinte comando:
+     ```bash
+     pip install pygame
+     ```
+
+---
+
+## **Rodando o Código**
+
+### Passo 1: Clone o Repositório
+Primeiro, clone o repositório para o seu computador:
+```bash
+git clone https://github.com/Bieelzy/conhecimentos-gerais.git
+cd conhecimentos-gerais
+```
+### Passo 2: Estrutura de Pastas
+  ```bash
+  .
+  script/ # pasta mãe
+  ├── conhecimentos gerais.py # O código principal do jogo
+  ├── music/ # Pasta com arquivos de música
+      ├── spookyfunnight.mp3
+      └── errou.mp3
+  ```
+### Execute o Script
+Para rodar o jogo, execute o seguinte comando no terminal:
+  ```bash
+  python "conhecimentos gerais.py"
+  ```
