@@ -6,20 +6,12 @@ Meio que só fiz uma changelog no update final heh.
 ### Added
 - O jogo inteiro
  
-### Changed
- 
-### Fixed
- 
 ## [v1.1.0] - 2024-12-05
  
 ### Added
 - Musiquinha de fundo
-   
-### Changed
- 
-### Fixed
 
-## [2.0.0] - 2024-12-13
+## [v2.0.0] - 2024-12-13
  
 ### Added
 - MAIS 5 PERGUNTAS NOVAS!
@@ -32,7 +24,7 @@ Meio que só fiz uma changelog no update final heh.
 ### Fixed
 - Problemas com input.
 
-## [2.1.0] - 2024-12-26
+## [v2.1.0] - 2024-12-26
  
 ### Added
 - Sistema de Pontuação!
@@ -45,5 +37,3 @@ Meio que só fiz uma changelog no update final heh.
 ### Changed
 - Adicionado comentários de como funciona o código.
 - Timer de 2 segundos entre textos.
- 
-### Fixed
